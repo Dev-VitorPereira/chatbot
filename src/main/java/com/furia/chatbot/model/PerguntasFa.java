@@ -3,7 +3,7 @@ package com.furia.chatbot.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table (name = "PerguntasFa")
+@Table (name = "Perguntas")
 public class PerguntasFa {
 
     @Id
@@ -11,6 +11,7 @@ public class PerguntasFa {
     private Long id;
 
     private String texto;
+
 
     public PerguntasFa(Long id, String texto) {
         this.id = id;

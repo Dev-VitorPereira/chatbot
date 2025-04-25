@@ -3,7 +3,7 @@ package com.furia.chatbot.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table (name = "RespostasFa")
+@Table (name = "Respostas")
 public class RespostasFa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
