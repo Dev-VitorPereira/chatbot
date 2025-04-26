@@ -1,4 +1,9 @@
 package com.furia.chatbot.repository;
 
-public interface JogadoresRepository {
+import com.furia.chatbot.model.Jogadores;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface JogadoresRepository extends JpaRepository<Jogadores, Long> {
 }
