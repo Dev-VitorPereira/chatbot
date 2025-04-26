@@ -1,10 +1,11 @@
-package com.furia.chatbot.dto;
+package com.furia.chatbot.mapper;
 
+import com.furia.chatbot.dto.CuriosidadesDTO;
 import com.furia.chatbot.model.Curiosidades;
 
 public class CuriosidadesMapper {
 
-    public static  CuriosidadesDTO toDTO(Curiosidades curiosidades){
+    public static CuriosidadesDTO toDTO(Curiosidades curiosidades){
         return new CuriosidadesDTO(
                 curiosidades.getId(),
                 curiosidades.getTitulo(),

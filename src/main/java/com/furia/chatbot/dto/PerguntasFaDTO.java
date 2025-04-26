@@ -1,4 +1,6 @@
 package com.furia.chatbot.dto;
 
-public record PerguntasFaDTO() {
-}
+public record PerguntasFaDTO(
+         Long id,
+         String texto
+) { }

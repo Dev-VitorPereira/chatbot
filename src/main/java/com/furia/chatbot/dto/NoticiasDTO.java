@@ -1,4 +1,11 @@
 package com.furia.chatbot.dto;
 
-public record NoticiasDTO() {
-}
+import java.time.LocalDate;
+
+public record NoticiasDTO(
+        Long id,
+        String titulo,
+        String conteudo,
+        String fonteUrl,
+        LocalDate dataPublicacao
+) { }
