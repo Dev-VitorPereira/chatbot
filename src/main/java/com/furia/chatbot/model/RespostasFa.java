@@ -16,7 +16,7 @@ public class RespostasFa {
     @JoinColumn(name = "pergunta_id")
     private PerguntasFa pergunta;
 
-    public RespostasFa(Long id, String texto, boolean correta, PerguntasFa pergunta) {
+    public RespostasFa(Long id, String texto, boolean correta) {
         this.id = id;
         this.texto = texto;
         this.correta = correta;
