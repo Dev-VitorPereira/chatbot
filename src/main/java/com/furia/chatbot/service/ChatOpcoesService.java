@@ -29,7 +29,7 @@ public class ChatOpcoesService {
             case "curiosidades":
                 return "Aqui estão algumas curiosidades sobre a FURIA!";
             case "noticias":
-                return "Aqui estão as últimas notícias sobre a FURIA!" ;
+                return "Aqui estão as últimas notícias sobre a FURIA!" + "\n" + noticiasService.listaNoticias() ;
             case "jogadores":
                 return "Aqui estão os jogadores de CS da FURIA!";
             case "loja":
