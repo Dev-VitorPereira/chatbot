@@ -17,6 +17,8 @@ public class Noticias {
     private String fonteUrl;
     private LocalDate dataPublicacao;
 
+    public Noticias(){}
+
     public Noticias(Long id, String titulo, String conteudo, String fonteUrl, LocalDate dataPublicacao) {
         this.id = id;
         this.titulo = titulo;

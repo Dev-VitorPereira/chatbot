@@ -2,7 +2,9 @@ package com.furia.chatbot.mapper;
 
 import com.furia.chatbot.dto.NoticiasDTO;
 import com.furia.chatbot.model.Noticias;
+import org.springframework.stereotype.Component;
 
+@Component
 public class NoticiasMapper {
     public static NoticiasDTO toDTO(Noticias noticias){
         return new NoticiasDTO(

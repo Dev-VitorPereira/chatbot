@@ -1,6 +1,7 @@
 package com.furia.chatbot.service;
 
 import com.furia.chatbot.model.ChatOpcoes;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -8,6 +9,9 @@ import java.util.List;
 
 @Service
 public class ChatOpcoesService {
+
+    @Autowired
+    private  NoticiasService noticiasService;
 
     public List<ChatOpcoes> getOpcoes() {
         List<ChatOpcoes> opcoes = new ArrayList<>();
@@ -25,7 +29,7 @@ public class ChatOpcoesService {
             case "curiosidades":
                 return "Aqui estão algumas curiosidades sobre a FURIA!";
             case "noticias":
-                return "Aqui estão as últimas notícias sobre a FURIA!";
+                return "Aqui estão as últimas notícias sobre a FURIA!" ;
             case "jogadores":
                 return "Aqui estão os jogadores de CS da FURIA!";
             case "loja":
