@@ -11,7 +11,7 @@ import java.util.List;
 public class ChatOpcoesService {
 
     @Autowired
-    private  NoticiasService noticiasService;
+    private NoticiasService noticiasService;
     @Autowired
     private LojaService lojaService;
     @Autowired
@@ -33,17 +33,21 @@ public class ChatOpcoesService {
     }
 
     public String processoEscolha(String escolha) {
+        if (escolha == null) {
+            return "Erro: Nenhuma opção foi selecionada.";
+        }
+
         switch (escolha) {
             case "curiosidades":
-                return "Aqui estão algumas curiosidades sobre a FURIA!" + "\n" + curiosidadesService.listarCuriosidades() ;
+                return "Aqui estão algumas curiosidades sobre a FURIA!" + "\n" + curiosidadesService.listarCuriosidades();
             case "noticias":
-                return "Aqui estão as últimas notícias sobre a FURIA!" + "\n" + noticiasService.listaNoticias() ;
+                return "Aqui estão as últimas notícias sobre a FURIA!" + "\n" + noticiasService.listaNoticias();
             case "jogadores":
-                return "Aqui estão os jogadores de CS da FURIA!" + "\n" +jogadoresService.listaJogadores();
+                return "Aqui estão os jogadores de CS da FURIA!" + "\n" + jogadoresService.listaJogadores();
             case "loja":
-                return "A loja está em construção!" +"\n" + lojaService.listaLoja();
+                return "A loja está em construção!" + "\n" + lojaService.listaLoja();
             case "proximosJogos":
-                return "Confira os próximos jogos da FURIA!" +"\n" +proximosJogosService.listarProximosJogos();
+                return "Confira os próximos jogos da FURIA!" + "\n" + proximosJogosService.listarProximosJogos();
             default:
                 return "Opção inválida!";
         }

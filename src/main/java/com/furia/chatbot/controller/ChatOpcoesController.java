@@ -1,5 +1,6 @@
 package com.furia.chatbot.controller;
 
+import com.furia.chatbot.dto.EscolhaDTO;
 import com.furia.chatbot.model.ChatOpcoes;
 import com.furia.chatbot.service.ChatOpcoesService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,12 +22,16 @@ public class ChatOpcoesController {
         List<ChatOpcoes> opcoes = chatOpcoes.getOpcoes();
         return ResponseEntity.ok(opcoes);
     }
-    @PostMapping("/resposta")
-    public ResponseEntity<String> processoEscolha(@RequestBody Map<String, String> escolhaMap){
-        String escolha = escolhaMap.get("escolha");
-        String resposta = chatOpcoes.processoEscolha(escolha);
-        return ResponseEntity.ok(resposta);
 
+    @PostMapping("/resposta")
+    public ResponseEntity<String> processoEscolha(@RequestBody EscolhaDTO dto){
+        if (dto.getEscolha() == null || dto.getEscolha().trim().isEmpty()) {
+            return ResponseEntity.badRequest().body("Erro: Campo 'escolha' está ausente ou vazio.");
+        }
+
+        String resposta = chatOpcoes.processoEscolha(dto.getEscolha());
+        return ResponseEntity.ok(resposta);
     }
+
 }
 

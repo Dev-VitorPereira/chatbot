@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: url('fundo-furia.jpg') no-repeat center center fixed;
+    background: url('imagens/fundo-furia.jpg');
     background-size: cover;
     color: #FFFFFF;
     display: flex;
