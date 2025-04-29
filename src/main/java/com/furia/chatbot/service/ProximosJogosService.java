@@ -1,5 +1,7 @@
 package com.furia.chatbot.service;
 
+import com.furia.chatbot.dto.ProximosJogosDTO;
+import com.furia.chatbot.mapper.ProximosJogosMapper;
 import com.furia.chatbot.repository.ProximoJogosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
