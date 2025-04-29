@@ -12,6 +12,14 @@ public class ChatOpcoesService {
 
     @Autowired
     private  NoticiasService noticiasService;
+    @Autowired
+    private LojaService lojaService;
+    @Autowired
+    private CuriosidadesService curiosidadesService;
+    @Autowired
+    private ProximosJogosService proximosJogosService;
+    @Autowired
+    private JogadoresService jogadoresService;
 
     public List<ChatOpcoes> getOpcoes() {
         List<ChatOpcoes> opcoes = new ArrayList<>();
@@ -27,15 +35,15 @@ public class ChatOpcoesService {
     public String processoEscolha(String escolha) {
         switch (escolha) {
             case "curiosidades":
-                return "Aqui estão algumas curiosidades sobre a FURIA!";
+                return "Aqui estão algumas curiosidades sobre a FURIA!" + "\n" + curiosidadesService.listarCuriosidades() ;
             case "noticias":
                 return "Aqui estão as últimas notícias sobre a FURIA!" + "\n" + noticiasService.listaNoticias() ;
             case "jogadores":
-                return "Aqui estão os jogadores de CS da FURIA!";
+                return "Aqui estão os jogadores de CS da FURIA!" + "\n" +jogadoresService.listaJogadores();
             case "loja":
-                return "A loja está em construção!";
+                return "A loja está em construção!" +"\n" + lojaService.listaLoja();
             case "proximosJogos":
-                return "Confira os próximos jogos da FURIA!";
+                return "Confira os próximos jogos da FURIA!" +"\n" +proximosJogosService.listarProximosJogos();
             default:
                 return "Opção inválida!";
         }

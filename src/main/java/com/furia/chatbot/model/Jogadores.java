@@ -18,6 +18,9 @@ public class Jogadores {
     private String fotoUrl;
     private String redeSocial;
 
+    public Jogadores(){
+
+    }
     public Jogadores(Long id, String nome, String nickname, String funcao, double rating, String fotoUrl, String redeSocial) {
         this.id = id;
         this.nome = nome;

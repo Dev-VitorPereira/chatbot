@@ -17,6 +17,8 @@ public class Loja {
     private String imagemUrl;
     private String categoria;
 
+    public Loja(){}
+
     public Loja(Long id, String nome, String descricao, double preco, String imagemUrl, String categoria) {
         this.id = id;
         this.nome = nome;

@@ -15,6 +15,9 @@ public class Curiosidades {
     private String descricao;
     private String categoria;
 
+    public  Curiosidades(){
+
+    }
     public Curiosidades(Long id, String titulo, String descricao, String categoria) {
         this.id = id;
         this.titulo = titulo;

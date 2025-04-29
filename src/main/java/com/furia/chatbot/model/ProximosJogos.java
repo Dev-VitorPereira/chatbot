@@ -21,6 +21,9 @@ public class ProximosJogos {
     private String local;
     private String status;
 
+    public ProximosJogos(){
+
+    }
     public ProximosJogos(Long id, String adversario, LocalDate dataJogo, LocalTime horaJogo, String torneio, String local, String status) {
         this.id = id;
         this.adversario = adversario;
