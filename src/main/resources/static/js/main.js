@@ -31,6 +31,14 @@ async function processarEscolha(escolha) {
         const escolhaLower = escolha.toLowerCase();
         if (escolhaLower.includes('jogadores')) {
             JogadoresHandler.handle(resposta);
+        } else if (escolhaLower.includes('loja')) {
+            LojaHandler.handle(resposta);
+        } else if (escolhaLower.includes('curiosidade')) {
+            CuriosidadesHandler.handle(resposta);
+        } else if (escolhaLower.includes('jogos') || escolhaLower.includes('jogos')) {
+            ProximosJogosHandler.handle(resposta);
+        } else if (escolhaLower.includes('notícia') || escolhaLower.includes('noticias')) {
+            NoticiasHandler.handle(resposta);
         } else {
             // Caso não tenha handler específico ainda
             ChatUI.appendMessage(resposta, 'bot');

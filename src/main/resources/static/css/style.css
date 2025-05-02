@@ -145,3 +145,12 @@ button:hover {
   text-decoration: underline;
   color: #0084b4; /* Azul mais forte ao passar o mouse */
 }
+
+.noticia-item {
+  background-color: #f9fbe7;
+  border-left: 4px solid #c0ca33;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  color: #0F0F0F;
+}

@@ -1,6 +1,5 @@
-
 const JogadoresHandler = {
-    handle(resposta) {
+    async handle(resposta) {
         // Extrai o conteúdo entre colchetes []
         const listaRegex = /\[(.*?)\]$/s;
         const match = resposta.match(listaRegex);
@@ -12,7 +11,8 @@ const JogadoresHandler = {
         // Divide cada jogador por "JogadoresDTO"
         const jogadoresTexto = match[1].split('JogadoresDTO').filter(j => j.trim() !== '');
 
-        jogadoresTexto.forEach(jogadorStr => {
+        // Exibe os jogadores com delay
+        for (const jogadorStr of jogadoresTexto) {
             // Extrai os campos do texto do DTO
             const campos = {};
             jogadorStr.split(',').forEach(item => {
@@ -61,6 +61,9 @@ const JogadoresHandler = {
             const chatBox = document.getElementById('chat-box');
             chatBox.appendChild(messageElement);
             chatBox.scrollTop = chatBox.scrollHeight;
-        });
+
+            // Atraso entre cada jogador
+            await delay(2000);  // Espera 2 segundos antes de mostrar o próximo jogador
+        }
     }
 };

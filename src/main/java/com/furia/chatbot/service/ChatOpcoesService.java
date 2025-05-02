@@ -27,7 +27,7 @@ public class ChatOpcoesService {
         opcoes.add(new ChatOpcoes("Últimas Notícias", "noticias"));
         opcoes.add(new ChatOpcoes("Jogadores de CS", "jogadores"));
         opcoes.add(new ChatOpcoes("Loja", "loja"));
-        opcoes.add(new ChatOpcoes("Próximos Jogos", "proximosJogos"));
+        opcoes.add(new ChatOpcoes("Próximos Jogos", "jogos"));
 
         return opcoes;
     }
@@ -45,7 +45,7 @@ public class ChatOpcoesService {
             case "jogadores":
                 return "Aqui estão os jogadores de CS da FURIA!" + "\n" + jogadoresService.listaJogadores();
             case "loja":
-                return "A loja está em construção!" + "\n" + lojaService.listaLoja();
+                return "Aqui estão os item da Loja da FURIA" + "\n" + lojaService.listaLoja();
             case "proximosJogos":
                 return "Confira os próximos jogos da FURIA!" + "\n" + proximosJogosService.listarProximosJogos();
             default:
