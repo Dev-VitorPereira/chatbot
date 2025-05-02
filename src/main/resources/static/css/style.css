@@ -1,115 +1,147 @@
 /* Fundo com imagem e sobreposição escura */
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: url('imagens/fundo-furia.jpg');
-    background-size: cover;
-    color: #FFFFFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    position: relative;
-  }
-  
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: -1;
-  }
-  
-  .chat-container {
-    width: 400px;
-    background: #1F1F1F;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .chat-container h1 {
-    text-align: center;
-    margin: 0;
-    font-size: 24px;
-    color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .furia-logo {
-    height: 100px;
-    vertical-align: middle;
-  }
-  
-  /* Caixa de mensagens */
-  #chat-box {
-    height: 300px;
-    overflow-y: auto;
-    background-color: #0F0F0F;
-    border: 1px solid #333;
-    padding: 10px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .message {
-    max-width: 75%;
-    padding: 10px 14px;
-    border-radius: 15px;
-    word-wrap: break-word;
-    font-size: 14px;
-    line-height: 1.4;
-    position: relative;
-  }
-  
-  .user {
-    align-self: flex-end;
-    background-color: #B0B0B0;
-    color: #0F0F0F;
-    border-bottom-right-radius: 0;
-  }
-  
-  .bot {
-    align-self: flex-start;
-    background-color: #1F1F1F;
-    color: #FFFFFF;
-    border-bottom-left-radius: 0;
-  }
-  
-  /* Campo de entrada e botão */
-  form {
-    display: flex;
-  }
-  
-  input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #444;
-    background-color: #1F1F1F;
-    color: white;
-    border-radius: 5px 0 0 5px;
-  }
-  
-  button {
-    padding: 10px;
-    background-color: #B0B0B0;
-    color: #0F0F0F;
-    border: none;
-    cursor: pointer;
-    border-radius: 0 5px 5px 0;
-    font-weight: bold;
-    transition: background 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #FFFFFF;
-  }
-  
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('imagens/fundo-furia.jpg');
+  background-size: cover;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+/* Sobreposição escura no fundo */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+/* Container do chat */
+.chat-container {
+  width: 400px;
+  background: #1F1F1F;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Título do chat */
+.chat-container h1 {
+  text-align: center;
+  margin: 0;
+  font-size: 24px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Logo da FURIA */
+.furia-logo {
+  height: 80px; /* Ajuste a altura conforme necessário */
+  vertical-align: middle;
+}
+
+/* Caixa de mensagens */
+#chat-box {
+  height: 300px;
+  overflow-y: auto;
+  background-color: #0F0F0F;
+  border: 1px solid #333;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Mensagens */
+.message {
+  max-width: 75%;
+  padding: 10px 14px;
+  border-radius: 15px;
+  word-wrap: break-word;
+  font-size: 14px;
+  line-height: 1.4;
+  position: relative;
+}
+
+/* Estilo das mensagens do usuário */
+.user {
+  align-self: flex-end;
+  background-color: #B0B0B0;
+  color: #0F0F0F;
+  border-bottom-right-radius: 0;
+}
+
+/* Estilo das mensagens do bot */
+.bot {
+  align-self: flex-start;
+  background-color: #1F1F1F;
+  color: #FFFFFF;
+  border-bottom-left-radius: 0;
+}
+
+/* Campo de entrada e botão */
+form {
+  display: flex;
+}
+
+/* Estilo do campo de entrada */
+input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #444;
+  background-color: #1F1F1F;
+  color: white;
+  border-radius: 5px 0 0 5px;
+}
+
+/* Estilo do botão */
+button {
+  padding: 10px;
+  background-color: #B0B0B0;
+  color: #0F0F0F;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+button:hover {
+  background-color: #FFFFFF;
+  transform: scale(1.05); /* Aumenta um pouco o botão */
+}
+
+/* Estilo das imagens dos jogadores */
+.message.bot img {
+  max-width: 100%;
+  margin-bottom: 8px;
+  border-radius: 8px; /* Adiciona borda arredondada na imagem */
+}
+
+/* Links do bot (ex: redes sociais) */
+.message.bot a {
+  display: inline-block;
+  margin-top: 5px;
+  color: #1da1f2; /* Azul estilo Twitter */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Efeito ao passar o mouse no link */
+.message.bot a:hover {
+  text-decoration: underline;
+  color: #0084b4; /* Azul mais forte ao passar o mouse */
+}

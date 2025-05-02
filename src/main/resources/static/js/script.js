@@ -22,7 +22,7 @@ async function carregarOpcoes() {
     const response = await fetch('http://localhost:8080/chat/opcoes');
     const opcoes = await response.json();
 
-    appendMessage('Bom dia! Escolha uma das opções abaixo:', 'bot');
+    appendMessage('Olá! Escolha uma das opções abaixo:', 'bot');
     await delay(1000); // Espera 1 segundo antes de começar a listar
 
     for (const opcao of opcoes) {
